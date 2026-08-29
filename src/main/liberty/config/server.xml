@@ -1,0 +1,28 @@
+<server description="GalenoSV Server">
+
+    <featureManager>
+        <feature>jakartaee-11.0</feature>
+        <feature>webProfile-11.0</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="9080"
+                  httpsPort="9443"/>
+
+    <library id="postgresJDBCLib">
+        <fileset dir="${server.config.dir}/lib" includes="*.jar"/>
+    </library>
+
+    <dataSource id="pgdb" jndiName="jdbc/pgdb">
+        <jdbcDriver libraryRef="postgresJDBCLib"/>
+        <properties.postgresql
+            serverName="localhost"
+            portNumber="5432"
+            databaseName="GalenoSV"
+            user="antonio"
+            password="antonio123"/>
+    </dataSource>
+
+    <applicationManager autoExpand="true"/>
+
+</server>
