@@ -142,5 +142,5 @@ public class ConsultaProcedimiento implements Serializable {
     public String toString() {
         return "sv.edu.ues.occ.ingenieria.ppl115_2026.salud.galenosv.entity.ConsultaProcedimiento[ idConsultaProcedimiento=" + idConsultaProcedimiento + " ]";
     }
-    
+
 }

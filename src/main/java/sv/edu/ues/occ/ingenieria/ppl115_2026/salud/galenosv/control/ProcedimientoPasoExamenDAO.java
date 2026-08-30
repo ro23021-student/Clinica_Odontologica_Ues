@@ -16,19 +16,17 @@ import sv.edu.ues.occ.ingenieria.ppl115_2026.salud.galenosv.entity.Procedimiento
  */
 @Stateless
 @LocalBean
-public class ProcedimientoPasoExamenDAO extends DefaultDAO<ProcedimientoPasoExamen>{
-   
-    
-    @PersistenceContext(unitName="Galeno-PU")
+public class ProcedimientoPasoExamenDAO extends DefaultDAO<ProcedimientoPasoExamen> {
+
+    @PersistenceContext(unitName = "Galeno-PU")
     EntityManager em;
-    
+
     @Override
     public EntityManager getEntityManager() {
-     return em;
+        return em;
     }
-    
-    
-     @Override
+
+    @Override
     public List<ProcedimientoPasoExamen> findRange(int first, int max) throws IllegalArgumentException, IllegalStateException {
         if (first >= 0 && max > 0) {
             try {
